@@ -1,0 +1,4 @@
+date,amount,currency,category,description
+2026-10-01,1200.00,PKR,Food,Groceries
+2026-10-02,15.50,USD,Food,Coffee
+2026-10-03,-5,PKR,Food,bad: negative amount

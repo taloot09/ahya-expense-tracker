@@ -1,0 +1,15 @@
+[project]
+name = "ahya-expense-tracker"
+version = "1.0.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+addopts = "--cov=app --cov-report=term-missing -q"
+
+[tool.coverage.run]
+omit = ["alembic/*"]
+# SQLAlchemy async runs code inside greenlets; tell coverage to trace them.
+concurrency = ["greenlet", "thread"]
